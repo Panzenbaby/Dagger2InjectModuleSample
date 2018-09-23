@@ -8,6 +8,6 @@ import dagger.android.AndroidInjector;
 import de.panzenbaby.rxapplication.BaseApplication;
 
 @Singleton
-@Component(modules = { AndroidInjectionModule.class, MainApplicationModule.class})
+@Component(modules = { AndroidInjectionModule.class, DataModule.class, UiModule.class, RepositoryModule.class})
 public interface MainComponent extends AndroidInjector<BaseApplication> {
 }

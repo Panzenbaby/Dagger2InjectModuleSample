@@ -12,29 +12,11 @@ import de.panzenbaby.rxapplication.MainActivity;
 import de.panzenbaby.ui.SimpleDialogFragment;
 
 @Module
-public abstract class MainApplicationModule {
+public abstract class UiModule {
 
     @ContributesAndroidInjector
     abstract MainActivity contributeActivityInjector();
 
     @ContributesAndroidInjector
     abstract SimpleDialogFragment contributeSimpleDialogFragment();
-
-    @Singleton
-    @Provides
-    public static Incrementally provideIncrementally() {
-        return new Incrementally(0);
-    }
-
-    @Singleton
-    @Provides
-    public static SimpleRepository provideSimpleRepository(Incrementally incrementally) {
-        return new SimpleRepository(incrementally);
-    }
-
-    @Singleton
-    @Provides
-    public static ISimpleRepository provideISimpleRepository(SimpleRepository repository) {
-        return repository;
-    }
 }
