@@ -14,6 +14,7 @@ import dagger.android.support.HasSupportFragmentInjector;
 import de.panzenbaby.rxapplication.di.DaggerMainComponent;
 
 public class BaseApplication extends Application implements HasActivityInjector, HasSupportFragmentInjector {
+
     @Inject
     public DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
 
